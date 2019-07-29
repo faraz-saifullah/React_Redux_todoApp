@@ -6,7 +6,6 @@ import { getUserInfo } from '../selectors/selector';
 import { login } from '../actions/actionCreator';
 import { bindActionCreators } from 'redux';
 
-
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);

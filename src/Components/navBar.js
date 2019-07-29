@@ -4,12 +4,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router';
-import { getStore } from '../selectors/selector';
 import { connect } from 'react-redux';
-import { login } from '../actions/actionCreator';
-import { bindActionCreators } from 'redux';
+import store from '../index';
 
-// const x = getStore();
+(function(){
+  console.log(store);
+})();
 
 class NavBar extends React.Component {
   render() {
@@ -28,11 +28,4 @@ class NavBar extends React.Component {
   }
 }
 
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-      login
-  }, dispatch)
-}
-
-export default connect(null, mapDispatchToProps)(NavBar)
+export default connect(null, {})(NavBar);
